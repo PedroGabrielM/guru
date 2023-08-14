@@ -1,10 +1,353 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>LDS App</title>
+
+    <!-- Author -->
+    <meta name="description" content="LDSApp">
+    <meta name="keywords" content="shop, e-commerce, angular">
+    <meta name="author" content="Pedro">
+
+    <!-- Mobile Specific Meta Tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon and Apple Icons-->
+    <link rel="icon" type="image/x-icon" href="/assets/images/fav-icons/favicon.ico">
+
+    <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="/assets/css/vendor.min.css">
+
+    <!-- Main Template Styles-->
+    <link id="mainStyles" rel="stylesheet" media="screen" href="/assets/css/styles.min.css">
+
+    <!-- Customizer Styles-->
+    <link rel="stylesheet" media="screen" href="/assets/css/customizer.min.css">
+
+    <!-- Modernizr-->
+    <script src="/assets/js/modernizr.min.js"></script>
 </head>
 <body>
+<!-- Navbar-->
+<header class="navbar navbar-sticky navbar-dark bg-dark">
+    <!-- Search-->
+    <form class="site-search" method="get">
+        <input type="text" name="site_search" placeholder="Digite para buscar...">
+
+        <div class="search-tools">
+            <span class="clear-search">Limpar</span>
+
+            <span class="close-search">
+          <i class="icon-cross"></i>
+        </span>
+        </div>
+    </form>
+
+    <div class="site-branding">
+        <div class="inner">
+
+            <!-- Site Logo-->
+            <a class="site-logo light-logo" href="/">
+                <img src="/assets/images/png/logo-light.png">
+            </a>
+
+            <a class="site-logo logo-stuck" href="/">
+                <img src="/assets/images/png/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation-->
+    <nav class="site-menu">
+        <ul>
+            <li class="has-megamenu active">
+                <a href="/">
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    <span>Produtos</span>
+                </a>
+
+                <ul class="sub-menu">
+                    <li>
+                        <a th:href="@{/product/all}">Lista de produtos</a>
+                    </li>
+                    <li class="has-children">
+                        <a href="/">
+                            <span>Categoria</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a th:href="@{/product/all}">Sapatos e tênis</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/product/all}">Óculos</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/product/all}">Mochilas</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+
+                <a th:href="@{/about}">
+                    <span>Sobre</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/account/login}">
+                    <span>Crie sua conta</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/user/all}">
+                    <span>Usuários</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Toolbar-->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+
+                <div class="search">
+                    <i class="icon-search"></i>
+                </div>
+
+                <div class="account">
+                    <a href="/account-orders"></a>
+                    <i class="icon-head"></i>
+                    <ul class="toolbar-dropdown">
+
+                        <li class="sub-menu-user">
+
+                            <div class="user-ava">
+                                <img src="/assets/images/jpg/user-ava-sm.jpg" alt="Daniel Adams">
+                            </div>
+
+                            <div class="user-info">
+                                <h6 class="user-name">Tiburssinho</h6>
+                                <!-- <span class="text-xs text-muted">xxx pontos acumulados</span> -->
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="/account-profile">Perfil</a>
+                        </li>
+
+                        <li>
+                            <a href="/account-orders">Pedidos</a>
+                        </li>
+
+                        <li>
+                            <a href="/account-wishlist">Lista de desejos</a>
+                        </li>
+
+                        <li class="sub-menu-separator"></li>
+
+                        <li>
+                            <a href="/home-dark-header">
+                                <i class="icon-unlock"></i>
+                                Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cart">
+                    <a href="/cart"></a>
+                    <i class="icon-bag"></i>
+                    <span class="count">3</span>
+                    <span class="subtotal">R$289.68</span>
+                    <div class="toolbar-dropdown">
+
+                        <div class="dropdown-product-item">
+                <span class="dropdown-product-remove">
+                  <i class="icon-cross"></i>
+                </span>
+
+                            <a class="dropdown-product-thumb" href="/shop-single">
+                                <img src="/assets/images/jpg/shoes-01-md.jpg" alt="Product">
+                            </a>
+
+                            <div class="dropdown-product-info">
+                                <a class="dropdown-product-title" href="/shop-single">Tenis X</a>
+                                <span class="dropdown-product-details">1 x R$43.90</span>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-product-item">
+                <span class="dropdown-product-remove">
+                  <i class="icon-cross"></i>
+                </span>
+
+                            <a class="dropdown-product-thumb" href="/shop-single">
+                                <img src="/assets/images/jpg/hat-01-md.jpg" alt="Product">
+                            </a>
+
+                            <div class="dropdown-product-info">
+                                <a class="dropdown-product-title" href="/shop-single">Boné</a>
+                                <span class="dropdown-product-details">2 x R$24.89</span>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-product-item">
+                <span class="dropdown-product-remove">
+                  <i class="icon-cross"></i>
+                </span>
+
+                            <a class="dropdown-product-thumb" href="/shop-single">
+                                <img src="/assets/images/jpg/bag-01-md.jpg" alt="Product">
+                            </a>
+
+                            <div class="dropdown-product-info">
+                                <a class="dropdown-product-title" href="/shop-single">Bolsa</a>
+                                <span class="dropdown-product-details">1 x R$200.00</span>
+                            </div>
+                        </div>
+
+                        <div class="toolbar-dropdown-group">
+                            <div class="column">
+                                <span class="text-lg">Total:</span>
+                            </div>
+
+                            <div class="column text-right">
+                                <span class="text-lg text-medium">R$289.68&nbsp;</span>
+                            </div>
+                        </div>
+
+                        <div class="toolbar-dropdown-group">
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-secondary" href="/cart">Ver carrinho</a>
+                            </div>
+
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-success" href="/checkout-address">Finalizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="offcanvas-wrapper">
+
+    <!-- Page Title-->
+    <!-- Page Content-->
+    <div layout:fragment="body"></div>
+
+    <!-- Site Footer-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- Contact Info-->
+                <div class="col-lg-3 col-md-6">
+                    <section class="widget widget-light-skin">
+                        <h3 class="widget-title">Entre em contato conosco</h3>
+                        <p class="text-white">Telefone: 0800 0001-0001</p>
+                        <ul class="list-unstyled text-sm text-white">
+                            <li><span class="opacity-50">Segunda-Sexta:</span>9h - 20h</li>
+                            <li><span class="opacity-50">Sabado-Domingo:</span>10h - 18h</li>
+                        </ul>
+                        <p>
+                            <a class="navi-link-light" href="#">suporte@angular.com</a>
+                        </p>
+                        <a class="social-button shape-circle sb-facebook sb-light-skin" href="/home-dark-header">
+                            <i class="socicon-facebook"></i>
+                        </a>
+                        <a class="social-button shape-circle sb-twitter sb-light-skin" href="/home-dark-header">
+                            <i class="socicon-twitter"></i>
+                        </a>
+                        <a class="social-button shape-circle sb-instagram sb-light-skin" href="/home-dark-header">
+                            <i class="socicon-instagram"></i>
+                        </a>
+                        <a class="social-button shape-circle sb-google-plus sb-light-skin" href="/home-dark-header">
+                            <i class="socicon-googleplus"></i>
+                        </a>
+                    </section>
+                </div>
+
+                <!-- Mobile App Buttons-->
+                <div class="col-lg-3 col-md-6">
+                    <section class="widget widget-light-skin">
+                        <h3 class="widget-title">Nossos Apps</h3>
+                        <a class="market-button apple-button mb-light-skin" href="#">
+                            <span class="mb-subtitle">Baixe na</span>
+                            <span class="mb-title">App Store</span>
+                        </a>
+                        <a class="market-button google-button mb-light-skin" href="#">
+                            <span class="mb-subtitle">Baixe na</span>
+                            <span class="mb-title">Google Play</span>
+                        </a>
+                    </section>
+                </div>
+
+                <!-- About Us-->
+                <div class="col-lg-3 col-md-6">
+                    <section class="widget widget-links widget-light-skin">
+                        <h3 class="widget-title">Sobre</h3>
+                        <ul>
+                            <li>
+                                <a href="/about">Sobre</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Account / Orders Info-->
+                <div class="col-lg-3 col-md-6">
+                    <section class="widget widget-links widget-light-skin">
+                        <h3 class="widget-title">Conta &amp; Pedidos</h3>
+                        <ul>
+                            <li>
+                                <a href="/my-account">Sua conta</a>
+                            </li>
+                            <li>
+                                <a href="/my-account">Pedidos</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <hr class="hr-light mt-2 margin-bottom-2x">
+
+            <!-- Copyright-->
+            <p class="footer-copyright">
+                © All rights reserved. Coded with &nbsp;
+                <i class="icon-heart text-danger"></i>
+                <a href="/" target="_blank"> &nbsp;by Augostoso ;)</a>
+            </p>
+        </div>
+    </footer>
+</div>
+<!-- Back To Top Button-->
+<a class="scroll-to-top-btn" href="/home-dark-header">
+    <i class="icon-arrow-up"></i>
+</a>
+
+<!-- Backdrop-->
+<!-- <div class="site-backdrop"></div> -->
+
+<!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+<script src="/assets/js/vendor.min.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<!-- Customizer scripts-->
+<script src="/assets/js/customizer.min.js"></script>
 
 </body>
 </html>

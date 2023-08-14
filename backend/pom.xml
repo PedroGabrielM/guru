@@ -10,9 +10,9 @@
     </parent>
 
     <artifactId>backend</artifactId>
+
     <packaging>pom</packaging>
     <modules>
-        <module>backend-configuration</module>
         <module>backend-implementation</module>
         <module>backend-usecases</module>
         <module>backend-spring</module>

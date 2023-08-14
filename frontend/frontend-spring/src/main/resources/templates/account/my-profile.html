@@ -1,10 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html layout:decorate="~{layout}">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+
+<div layout:fragment="body">
+
+    <!-- Page Content-->
+    <div class="container padding-bottom-3x mb-2">
+        <div class="row">
+            <div class="col-lg-4">
+                <aside class="user-info-wrapper">
+                    <div class="user-cover" style="background-image: url(/assets/images/jpg/user-cover-img.jpg);">
+                        <div class="info-label" data-toggle="tooltip" title=""
+                             data-original-title="You currently have 290 Reward Points to spend">
+                            <i class="icon-medal"></i>290 pontos
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <a class="edit-avatar" href="#"></a>
+                            <img src="/assets/images/jpg/user-ava-lg.jpg" alt="User">
+                        </div>
+                        <div class="user-data">
+                            <h4>Tiburssinho Tiburssius</h4>
+                            <span>Se cadastrou em 01/01/2020</span>
+                        </div>
+                    </div>
+                </aside>
+                <nav class="list-group">
+                    <a class="list-group-item with-badge" href="#">
+                        <i class="icon-bag"></i>Pedidos
+                        <span class="badge badge-primary badge-pill">6</span>
+                    </a>
+                    <a class="list-group-item active" href="#">
+                        <i class="icon-head"></i>Perfil
+                    </a>
+                </nav>
+            </div>
+            <div class="col-lg-8">
+                <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+                <form class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="account-fn">Nome completo</label>
+                            <input class="form-control" type="text" id="account-fn" value="Tiburssinho Tiburssius" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-email">E-mail</label>
+                            <input class="form-control" type="email" id="account-email" value="tiburssinho@mail.com" disabled="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-phone">Telefone</label>
+                            <input class="form-control" type="text" id="account-phone" value="(35) 3473-1111" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-pass">Nova senha</label>
+                            <input class="form-control" type="password" id="account-pass">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-confirm-pass">Confirme a senha</label>
+                            <input class="form-control" type="password" id="account-confirm-pass">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <hr class="mt-2 mb-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="custom-control custom-checkbox d-block">
+                                <input class="custom-control-input" type="checkbox" id="subscribe_me" checked="">
+                                <label class="custom-control-label" for="subscribe_me">Receber promoções por e-mail</label>
+                            </div>
+                            <button class="btn btn-primary margin-right-none" type="button" data-toast=""
+                                    data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check"
+                                    data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Atualizar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
 
 </body>
 </html>

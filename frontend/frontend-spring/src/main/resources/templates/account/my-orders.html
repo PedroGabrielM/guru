@@ -1,10 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html layout:decorate="~{layout}">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+
+<div layout:fragment="body">
+
+    <!-- Page Content-->
+    <div class="container padding-bottom-3x mb-2">
+        <div class="row">
+            <div class="col-lg-4">
+                <aside class="user-info-wrapper">
+                    <div class="user-cover" style="background-image: url(/assets/images/jpg/user-cover-img.jpg);">
+                        <div class="info-label" data-toggle="tooltip" title=""
+                             data-original-title="You currently have 290 Reward Points to spend">
+                            <i class="icon-medal"></i>290 pontos
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <a class="edit-avatar" href="#"></a>
+                            <img src="/assets/images/jpg/user-ava-lg.jpg" alt="User">
+                        </div>
+                        <div class="user-data">
+                            <h4>Tiburssinho Tiburssius</h4>
+                            <span>Se cadastrou em 01/01/2020</span>
+                        </div>
+                    </div>
+                </aside>
+                <nav class="list-group">
+                    <a class="list-group-item with-badge active" href="#">
+                        <i class="icon-bag"></i>Pedidos
+                        <span class="badge badge-primary badge-pill">6</span>
+                    </a>
+                    <a class="list-group-item" href="#">
+                        <i class="icon-head"></i>Perfil
+                    </a>
+                </nav>
+            </div>
+            <div class="col-lg-8">
+                <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+                <div class="table-responsive">
+                    <table class="table table-hover margin-bottom-none">
+                        <thead>
+                        <tr>
+                            <th>Pedido #</th>
+                            <th>Data da Compra</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <a class="text-medium navi-link" href="#" data-toggle="modal"
+                                   data-target="#orderDetails">78A643CD409</a>
+                            </td>
+                            <td>08 Agosto, 2019</td>
+                            <td>
+                                <span class="text-danger">Cancelado</span>
+                            </td>
+                            <td>
+                                <span class="text-medium">R$760.50</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-medium navi-link" href="#" data-toggle="modal"
+                                   data-target="#orderDetails">34VB5540K83</a>
+                            </td>
+                            <td>12 Dezembro, 2019</td>
+                            <td>
+                                <span class="text-info">Em andamento</span>
+                            </td>
+                            <td>
+                                <span class="text-medium">R$315.20</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-medium navi-link" href="#" data-toggle="modal"
+                                   data-target="#orderDetails">112P45A90V2</a>
+                            </td>
+                            <td>15 Dezembro, 2019</td>
+                            <td>
+                                <span class="text-warning">Atrasado</span>
+                            </td>
+                            <td>
+                                <span class="text-medium">R$1,264.00</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-medium navi-link" href="#" data-toggle="modal"
+                                   data-target="#orderDetails">28BA67U0981</a>
+                            </td>
+                            <td>19 Maio, 2019</td>
+                            <td>
+                                <span class="text-success">Entregue</span>
+                            </td>
+                            <td>
+                                <span class="text-medium">R$198.35</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-medium navi-link" href="#" data-toggle="modal"
+                                   data-target="#orderDetails">502TR872W2</a>
+                            </td>
+                            <td>04 Abril, 2019</td>
+                            <td>
+                                <span class="text-success">Entregue</span>
+                            </td>
+                            <td>
+                                <span class="text-medium">R$2,133.90</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-medium navi-link" href="#" data-toggle="modal"
+                                   data-target="#orderDetails">47H76G09F33</a>
+                            </td>
+                            <td>30 Março, 2019</td>
+                            <td>
+                                <span class="text-success">Entregue</span>
+                            </td>
+                            <td>
+                                <span class="text-medium">R$86.40</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="text-right">
+                    <a class="btn btn-link-primary margin-bottom-none" href="#">
+                        <i class="icon-download"></i>
+                        &nbsp;Download dos pedidos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>

@@ -1,10 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html layout:decorate="~{layout}">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
+
+<div layout:fragment="body">
+
+  <!-- Main Slider-->
+  <section class="hero-slider" style="background-image: url(/assets/images/jpg/main-bg.jpg);">
+    <div class="owl-carousel large-controls dots-inside owl-loaded owl-drag"
+         data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 3000 }">
+
+      <div class="owl-item">
+        <div class="item">
+          <div class="container padding-top-3x">
+            <div class="row justify-content-center align-items-center">
+
+              <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+                <div class="from-bottom">
+                  <img class="d-inline-block w-150 mb-4" src="/assets/images/png/logo-puma-lg.png" alt="Puma">
+                  <div class="h2 text-body text-normal mb-2 pt-1">Mochila Puma</div>
+                  <div class="h2 text-body text-normal mb-4 pb-1">a partir de <span class="text-bold">R$37.99</span>
+                  </div>
+                </div>
+
+                <a class="btn btn-primary scale-up delay-1" href="/">Veja
+                  ofertas!</a>
+              </div>
+
+              <div class="col-md-6 padding-bottom-2x mb-3">
+                <img class="d-block mx-auto" src="/assets/images/png/item-bag-01-xl.png" alt="Puma Backpack">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="owl-item">
+        <div class="item">
+          <div class="container padding-top-3x">
+            <div class="row justify-content-center align-items-center">
+
+              <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+                <div class="from-bottom">
+                  <img class="d-inline-block w-200 mb-4" src="/assets/images/png/logo-converse-lg.png"
+                       alt="Converse">
+                  <div class="h2 text-body text-normal mb-2 pt-1">All Star II</div>
+                  <div class="h2 text-body text-normal mb-4 pb-1">por apenas <span class="text-bold">R$59.99</span>
+                  </div>
+                </div>
+
+                <a class="btn btn-primary scale-up delay-1" href="/shop-single">Compre
+                  agora!</a>
+              </div>
+
+              <div class="col-md-6 padding-bottom-2x mb-3">
+                <img class="d-block mx-auto" src="/assets/images/png/item-shoes-01-xl.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="owl-item">
+        <div class="item">
+          <div class="container padding-top-3x">
+            <div class="row justify-content-center align-items-center">
+
+              <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+                <div class="from-bottom">
+                  <img class="d-inline-block mb-4" src="/assets/images/png/logo-moto-md.png" style="width: 125px;"
+                       alt="Motorola">
+                  <div class="h2 text-body text-normal mb-2 pt-1">Smart Watch Moto 360 2nd</div>
+                  <div class="h2 text-body text-normal mb-4 pb-1">por apenas <span class="text-bold">R$299.99</span>
+                  </div>
+                </div>
+
+                <a class="btn btn-primary scale-up delay-1" href="/shop-single">Compre
+                  agora!</a>
+              </div>
+
+              <div class="col-md-6 padding-bottom-2x mb-3">
+                <img class="d-block mx-auto" src="/assets/images/png/item-clock-01-xl.png" alt="Moto 360">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Top Categories-->
+  <section class="container padding-top-1x">
+    <h3 class="text-center mb-30">Mais comprados</h3>
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="card mb-30">
+          <a class="card-img-tiles" href="/">
+
+            <div class="inner">
+              <div class="main-img">
+                <img src="/assets/images/jpg/shirt-01-lg.jpg" alt="Category">
+              </div>
+
+              <div class="thumblist">
+                <img src="/assets/images/jpg/shirt-02-lg.jpg" alt="Category">
+                <img src="/assets/images/jpg/jeans-01-lg.jpg" alt="Category">
+              </div>
+            </div>
+          </a>
+
+          <div class="card-body text-center">
+            <h4 class="card-title">Roupas</h4>
+            <p class="text-muted">A partir de R$49.99</p>
+            <a class="btn btn-outline-primary btn-sm" href="/">Ver produtos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card mb-30">
+          <a class="card-img-tiles" href="/">
+
+            <div class="inner">
+              <div class="main-img">
+                <img src="/assets/images/jpg/shoes-03-lg.jpg" alt="Category">
+              </div>
+
+              <div class="thumblist">
+                <img src="/assets/images/jpg/shoes-02-md.jpg" alt="Category">
+                <img src="/assets/images/jpg/shoes-04-lg.jpg" alt="Category">
+              </div>
+            </div>
+          </a>
+
+          <div class="card-body text-center">
+            <h4 class="card-title">Sapatos e tênis</h4>
+            <p class="text-muted">A partir de R$56.00</p>
+            <a class="btn btn-outline-primary btn-sm" href="/">Ver produtos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="card mb-30">
+          <a class="card-img-tiles" href="/">
+
+            <div class="inner">
+              <div class="main-img">
+                <img src="/assets/images/jpg/bag-04-lg.jpg" alt="Category">
+              </div>
+
+              <div class="thumblist">
+                <img src="/assets/images/jpg/bag-01-lg.jpg" alt="Category">
+                <img src="/assets/images/jpg/bag-03-lg.jpg" alt="Category">
+              </div>
+            </div>
+          </a>
+
+          <div class="card-body text-center">
+            <h4 class="card-title">Mochilas e bolsas</h4>
+            <p class="text-muted">A partir de R$27.00</p>
+            <a class="btn btn-outline-primary btn-sm" href="/products">Ver produtos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Popular Brands-->
+  <section class="bg-faded padding-top-1x padding-bottom-2x">
+    <div class="container">
+      <h3 class="text-center mb-30 pb-2">Marcas populares</h3>
+
+
+
+      <div class="owl-carousel owl-loaded owl-drag" data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: false, &quot;loop&quot;: true, &quot;autoplay&quot;: true,
+&quot;autoplayTimeout&quot;: 4000, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:2},
+&quot;470&quot;:{&quot;items&quot;:3},&quot;630&quot;:{&quot;items&quot;:4},&quot;991&quot;:{&quot;items&quot;:5},&quot;1200&quot;:{&quot;items&quot;:6}}
+}">
+
+
+        <div class="owl-item cloned" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-nike-md.png" alt="Nike">
+        </div>
+        <div class="owl-item cloned" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-puma-md.png" alt="Puma">
+        </div>
+        <div class="owl-item cloned" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-new-balance-md.png"
+               alt="New Balance">
+        </div>
+        <div class="owl-item cloned" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-dior-md.png" alt="Dior">
+        </div>
+        <div class="owl-item active" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-v-md.png" alt="V">
+        </div>
+        <div class="owl-item active" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-brooks-md.png" alt="Brooks">
+        </div>
+        <div class="owl-item active" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-adidas-md.png" alt="Adidas">
+        </div>
+        <div class="owl-item cloned" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-nike-md.png" alt="Nike">
+        </div>
+        <div class="owl-item cloned" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-puma-md.png" alt="Puma">
+        </div>
+        <div class="owl-item cloned" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-new-balance-md.png"
+               alt="New Balance">
+        </div>
+        <div class="owl-item cloned" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-dior-md.png" alt="Dior">
+        </div>
+        <div class="owl-item active" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-v-md.png" alt="V">
+        </div>
+        <div class="owl-item active" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-brooks-md.png" alt="Brooks">
+        </div>
+        <div class="owl-item active" style="width: 190px;">
+          <img class="d-block w-110 opacity-75 m-auto" src="/assets/images/png/logo-adidas-md.png" alt="Adidas">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services-->
+  <section class="container padding-top-2x padding-bottom-2x">
+    <div class="row">
+
+      <div class="col-md-3 col-sm-6 text-center mb-30">
+        <img class="d-block w-90 img-thumbnail rounded-circle mx-auto mb-3"
+             src="/assets/images/png/symbol-airplane-md.png" alt="Shipping">
+        <h6>Envio para qualquer país do mundo</h6>
+        <p class="text-muted margin-bottom-none">Envio gratuito para compras acima de R$100</p>
+      </div>
+
+      <div class="col-md-3 col-sm-6 text-center mb-30">
+        <img class="d-block w-90 img-thumbnail rounded-circle mx-auto mb-3" src="/assets/images/png/refresh-md.png"
+             alt="Money Back">
+        <h6>Garantia da devolução do dinheiro</h6>
+        <p class="text-muted margin-bottom-none">Devolvemos o dinheiro em até 30 dias</p>
+      </div>
+
+      <div class="col-md-3 col-sm-6 text-center mb-30">
+        <img class="d-block w-90 img-thumbnail rounded-circle mx-auto mb-3"
+             src="/assets/images/png/symbol-headphone-md.png" alt="Support">
+        <h6>Suporte ao cliente 24/7</h6>
+        <p class="text-muted margin-bottom-none">Suporte ao cliente 24/7</p>
+      </div>
+
+      <div class="col-md-3 col-sm-6 text-center mb-30">
+        <img class="d-block w-90 img-thumbnail rounded-circle mx-auto mb-3"
+             src="/assets/images/png/symbol-credit-card-md.png" alt="Payment">
+        <h6>Pagamento online seguro</h6>
+        <p class="text-muted margin-bottom-none">Possuímos certificados de segurança SSL</p>
+      </div>
+    </div>
+  </section>
+
+</div>
 
 </body>
 </html>

@@ -12,8 +12,7 @@
     <artifactId>frontend</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>frontend-configuration</module>
-        <module>frontend-implementation</module>
+       <module>frontend-implementation</module>
         <module>frontend-usecases</module>
         <module>frontend-spring</module>
     </modules>
