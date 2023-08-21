@@ -12,7 +12,6 @@
     <artifactId>frontend</artifactId>
     <packaging>pom</packaging>
     <modules>
-       <module>frontend-implementation</module>
         <module>frontend-usecases</module>
         <module>frontend-spring</module>
     </modules>
