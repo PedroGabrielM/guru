@@ -20,7 +20,8 @@ public class RestApiController<T> implements RestService<T> {
 
     @Override
     public List<T> get(String resource) {
-        final String endpoint =getEndpoint(resource);
+
+        final String endpoint = getEndpoint(resource);
         final RestTemplate restTemplate = new RestTemplate();
         final HttpEntity<String> httpEntity = new HttpEntity<>("");
 
@@ -30,6 +31,11 @@ public class RestApiController<T> implements RestService<T> {
 
         List<T> body = responseEntity.getBody();
 
+        return body;
+    }
+
+    @Override
+    public T get(String resource, Class<T> clazz) {
         return null;
     }
 
@@ -48,8 +54,4 @@ public class RestApiController<T> implements RestService<T> {
         return false;
     }
 
-    @Override
-    public T getById(String resource, Class<T> clazz) {
-        return null;
-    }
 }
