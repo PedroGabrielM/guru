@@ -12,7 +12,7 @@ public class FakeUserDao implements UserRepository {
 
     private final Map<Integer, UserModel> database;
 
-    public FakeUserDao(Map<Integer, UserModel> database) {
+    public FakeUserDao() {
         this.database = new HashMap<>();
         populateData();
     }
@@ -25,19 +25,19 @@ public class FakeUserDao implements UserRepository {
     }
 
     private void populateData() {
-        final UserModel firsUser = new UserModel();
-        firsUser.setEmail("email@gmail.com");
-        firsUser.setId(generateNextId());
-        firsUser.setUsername("user1");
-        firsUser.setPassword("pass1");
+        final UserModel firstUser = new UserModel();
+        firstUser.setEmail("email@gmail.com");
+        firstUser.setId(generateNextId());
+        firstUser.setUsername("user1");
+        firstUser.setPassword("pass1");
+        database.put(firstUser.getId(), firstUser);
 
         final UserModel secondUser = new UserModel();
-        secondUser.setEmail("email@gmail.com");
+        secondUser.setEmail("email2@gmail.com");
         secondUser.setId(generateNextId());
-        secondUser.setUsername("user1");
-        secondUser.setPassword("pass1");
-
-
+        secondUser.setUsername("user2");
+        secondUser.setPassword("pass2");
+        database.put(secondUser.getId(), secondUser);
     }
 
     @Override

@@ -44,6 +44,11 @@
 			<version>1.0-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>br.com.guru</groupId>
+			<artifactId>backend-implementation</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

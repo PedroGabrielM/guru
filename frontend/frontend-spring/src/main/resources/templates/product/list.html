@@ -7,25 +7,25 @@
 <body>
 
 <div layout:fragment="body">
-    <h1>Lista de usuários</h1>
+    <h1>Lista de produtos</h1>
 
     <table class="table">
         <tr>
             <td>Id</td>
             <td>Nome</td>
-            <td>Usuário</td>
-            <td>Email</td>
+            <td>Marca</td>
+            <td>Preço</td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
 
-        <tr th:each="user : ${users}">
-            <td th:text="${user.id}">100</td>
-            <td th:text="${user.fullName}">Tiburssinho</td>
-            <td th:text="${user.username}">Tibur</td>
-            <td th:text="${user.email}">Tibur@gmail.com</td>
-            <td >Detalhes</td>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id}">100</td>
+            <td th:text="${product.name}">Tiburssinho</td>
+            <td th:text="${product.brand}">Tibur</td>
+            <td th:text="${product.price}">Tibur@gmail.com</td>
+            <td>Detalhes</td>
             <td>Editar</td>
             <td>Remover</td>
         </tr>

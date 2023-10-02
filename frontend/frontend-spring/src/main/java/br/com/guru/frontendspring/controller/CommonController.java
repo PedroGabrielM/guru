@@ -8,7 +8,7 @@ public class CommonController {
 
     @GetMapping("/")
     public String getHomePage(){
-        return "index";
+        return "/index";
     }
 
     @GetMapping("/not-found")

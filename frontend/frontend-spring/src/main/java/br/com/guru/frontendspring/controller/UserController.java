@@ -25,7 +25,7 @@ public class UserController {
 
         List<UserModel> users = showAllUserCase.showAllUsers();
 
-        model.addAttribute("usuarios", users);
+        model.addAttribute("users", users);
 
         return "/user/list";
     }
